@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 
+
 export function InserirForm() {
   const [product, setProduct] = useState({
     name: '',
@@ -33,14 +34,14 @@ export function InserirForm() {
 
   return (
     <div className='container py-5'>
-      <form onSubmit={handleSubmit} className='d-flex flex-column w-25 m-auto gap-2'>
+      <form onSubmit={handleSubmit} className='d-flex flex-column w-25 m-auto gap-2 w-100'>
         <label>Inserir Produto:</label>
         <label htmlFor='name' className='text-white'>
           Nome:
         </label>
         <input
           type='text'
-          className='bg-secondary text-light border-none p-2'
+          className='bg-secondary text-light border-none p-2 w-100'
           onChange={handleChange}
           name='name'
           required
@@ -51,7 +52,7 @@ export function InserirForm() {
         </label>
         <input
           type='text'
-          className='bg-secondary text-light border-none p-2'
+          className='bg-secondary text-light border-none p-2 w-100'
           name='category'
           onChange={handleChange}
           required
@@ -62,7 +63,7 @@ export function InserirForm() {
         </label>
         <input
           type='number'
-          className='bg-secondary text-light border-none p-2'
+          className='bg-secondary text-light border-none p-2 w-100'
           onChange={handleChange}
           name='price'
           required

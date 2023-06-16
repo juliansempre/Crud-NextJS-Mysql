@@ -35,14 +35,14 @@ export function ProductForm() {
 
   return (
     <div className='container py-5'>
-      <form onSubmit={handleSubmit} className='d-flex flex-column w-25 m-auto gap-2'>
+      <form onSubmit={handleSubmit} className='d-flex flex-column w-25 m-auto gap-2 w-100'>
         <label>Atualizar Produto:</label>
         <label htmlFor='id' className='text-white'>
           Digite o codigo do produto:
         </label>
         <input
           type='text'
-          className='bg-secondary text-light border-none p-2'
+          className='bg-secondary text-light border-none p-2 w-30'
           onChange={handleChange}
           name='id'
           required
@@ -53,7 +53,7 @@ export function ProductForm() {
         </label>
         <input
           type='text'
-          className='bg-secondary text-light border-none p-2'
+          className='bg-secondary text-light border-none p-2 w-100'
           onChange={handleChange}
           name='name'
           required
@@ -64,7 +64,7 @@ export function ProductForm() {
         </label>
         <input
           type='text'
-          className='bg-secondary text-light border-none p-2'
+          className='bg-secondary text-light border-none p-2 w-100'
           name='category'
           onChange={handleChange}
           required
@@ -75,7 +75,7 @@ export function ProductForm() {
         </label>
         <input
           type='number'
-          className='bg-secondary text-light border-none p-2'
+          className='bg-secondary text-light border-none p-2 w-100'
           onChange={handleChange}
           name='price'
           required

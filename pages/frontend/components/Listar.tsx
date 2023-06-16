@@ -29,7 +29,7 @@ export default function ProductList({ data }) {
               <h4 className='text-dark'>Código do produto: {product.id}</h4>
               <h2 className='text-dark'>Nome: {product.name}</h2>
               <h3 className='text-dark'>Categoria: {product.category}</h3>
-              <h3 className='text-success fw-bold'>${product.price}</h3>
+              <h3 className='text-success fw-bold'>R$ {product.price}</h3>
               <button
                 className='btn btn-danger mt-2'
                 onClick={() => handleDelete(product.id)}

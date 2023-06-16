@@ -65,13 +65,15 @@ export default function Home({ products }) {
   
   return (
     <>
-      <button className='btn btn-primary float-right' onClick={handleInserirClick}>Inserir</button>
-      <button className='btn btn-primary float-right' onClick={handleUpdateClick}>Atualizar</button>
-      <button className='btn btn-danger float-right' onClick={handleDeleteClick}>Deletar</button>
+    <center>
+      <button className='btn btn-primary float-right mr-1' onClick={handleInserirClick}>Inserir</button>
+      <button className='btn btn-primary float-right mr-1' onClick={handleUpdateClick}>Atualizar</button>
+      <button className='btn btn-danger float-right  mr-1' onClick={handleDeleteClick}>Deletar</button>
+      </center>
       <Divisao>
         <Div1 displayInsertForm={displayInsertForm}><InserirForm /></Div1>
-        <Div2 displayProductForm={displayProductForm}><ProductForm /></Div2>
-        <Div3 displayDeleteForm={displayDeleteForm}><DeleteForm /></Div3>
+        <Div2 displayProductForm={displayProductForm} className='d-none'><ProductForm /></Div2>
+        <Div3 displayDeleteForm={displayDeleteForm} className='d-none'> <DeleteForm /></Div3>
       </Divisao>
 
       <ProductList data={products} />

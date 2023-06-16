@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 
+//Frontend Inserir produtos aqui
 
 export function Productform() {
 
@@ -16,12 +17,20 @@ export function Productform() {
 
         e.preventDefault();
 
-        const res = await axios.post('/api/products', {
+        const res = await axios.post('/api/controller/products', {
             name: product.name,
             category: product.category,
             price: product.price,
         })
         console.log(res);
+        //se deu certo ou não ao inserir
+        if(res){
+            alert("Usuario inserido com sucesso!")
+            window.location.reload();
+        }else{
+            alert("Ocorreu um erro ao inserir!")
+        }
+        
 
     };
 
@@ -34,7 +43,9 @@ export function Productform() {
 
     return (
         <div className='container py-5'>
+         
             <form onSubmit={handlerSubmit} className="d-flex flex-column w-25 m-auto gap-2">
+            <label>Inserir Produto:</label>
                 <label htmlFor="name" className='text-white'>Name:</label>
                 <input type="text" className='bg-secondary text-light border-none p-2' onChange={handlerChange} name='name'  />
 

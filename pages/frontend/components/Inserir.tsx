@@ -35,7 +35,7 @@ export function InserirForm() {
   return (
     <div className='container py-5'>
       <form onSubmit={handleSubmit} className='d-flex flex-column w-25 m-auto gap-2 w-100'>
-        <label>Inserir Produto:</label>
+        <label className='text-white h3'>Inserir Produto:</label>
         <label htmlFor='name' className='text-white'>
           Nome:
         </label>

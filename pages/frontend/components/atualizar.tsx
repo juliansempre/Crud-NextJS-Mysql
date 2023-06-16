@@ -36,7 +36,7 @@ export function ProductForm() {
   return (
     <div className='container py-5'>
       <form onSubmit={handleSubmit} className='d-flex flex-column w-25 m-auto gap-2 w-100'>
-        <label>Atualizar Produto:</label>
+        <label className='text-white h3'>Atualizar Produto:</label>
         <label htmlFor='id' className='text-white'>
           Digite o codigo do produto:
         </label>

@@ -31,7 +31,7 @@ export function DeleteForm() {
   return (
     <div className='container py-5'>
       <form onSubmit={handleSubmit} className='d-flex flex-column w-25 m-auto gap-2 w-100'>
-        <label>Excluir Produto:</label>
+        <label className='text-white h3'>Excluir Produto:</label>
         <label htmlFor='productId' className='text-white'>
           Código do Produto:
         </label>
